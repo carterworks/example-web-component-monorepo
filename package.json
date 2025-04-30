@@ -1,0 +1,33 @@
+{
+  "name": "example-web-component-monorepo",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "lit": "^3.3.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./ex-button": {
+      "import": "./dist/ex-button/index.js",
+      "types": "./dist/ex-button/index.d.ts"
+    },
+    "./ex-header": {
+      "import": "./dist/ex-header/index.js",
+      "types": "./dist/ex-header/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build:types": "tsc",
+    "check:types": "tsc --noEmit",
+    "prepack": "npm run build:types"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

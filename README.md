@@ -8,6 +8,6 @@
 This is an example repository on how to package web components for npm. 
 
 * The files are written in Typescript.
-* The files are distributed as JavaScript, with `*.d.ts` files and source maps.
-* The files are only distributed as ES modules. It's `<year>` already; stop shipping CommonJS and enjoy in the present.
+* The files are distributed as Javascript, with `*.d.ts` files and source maps.
 * The files are available to be included in the page via `<script>` tag.
+* The files are distributed only as ES modules, not CommonJS/UMD/IIFE. It's `<year>` and we can do it and no one can stop me.

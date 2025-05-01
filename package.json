@@ -14,20 +14,22 @@
   ],
   "exports": {
     "./ex-button": {
-      "import": "./dist/ex-button/index.js",
-      "types": "./dist/ex-button/index.d.ts"
+      "types": "./dist/ex-button/index.d.ts",
+      "import": "./dist/ex-button/ex-button.es.js"
     },
     "./ex-header": {
-      "import": "./dist/ex-header/index.js",
-      "types": "./dist/ex-header/index.d.ts"
+      "types": "./dist/ex-header/index.d.ts",
+      "import": "./dist/ex-header/ex-header.es.js"
     }
   },
   "scripts": {
     "build:types": "tsc",
+    "build:bundle": "vite build",
     "check:types": "tsc --noEmit",
-    "prepack": "npm run build:types"
+    "prepack": "rm -rf dist/ && npm run build:bundle && npm run build:types"
   },
   "devDependencies": {
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vite": "^6.3.4"
   }
 }

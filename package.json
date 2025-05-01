@@ -26,9 +26,11 @@
     "build:types": "tsc",
     "build:bundle": "vite build",
     "check:types": "tsc --noEmit",
+    "check:bundle": "@arethetypeswrong/cli --pack . --esm-only",
     "prepack": "rm -rf dist/ && npm run build:bundle && npm run build:types"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.4",
     "typescript": "^5.8.3",
     "vite": "^6.3.4"
   }
